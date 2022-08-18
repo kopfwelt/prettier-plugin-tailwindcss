@@ -261,7 +261,7 @@ function transformHtml(attributes, computedAttributes = [], computedType = 'js')
 function transformGlimmer(ast, { env }) {
   visit(ast, {
     AttrNode(attr, parent, key, index, meta) {
-      let attributes = ['class']
+      let attributes = ['class', 'tw', 'css']
 
       if (attributes.includes(attr.name) && attr.value) {
         meta.sortTextNodes = true
